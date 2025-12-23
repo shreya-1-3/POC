@@ -11,7 +11,7 @@ from llm import generate_sql, summarize_result
 
 app = FastAPI()
 
-# ---- CORS ----
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -23,8 +23,9 @@ app.add_middleware(
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-uploaded_tables = []
 uploaded_files = []
+uploaded_tables = []
+
 
 @app.post("/upload")
 async def upload_excel(file: UploadFile = File(...)):
