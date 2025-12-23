@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+
+pandas
+openpyxl
+
+sqlalchemy
+
+llama-cpp-python
+
+python-multipart
